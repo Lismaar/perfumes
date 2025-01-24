@@ -1,0 +1,639 @@
+/* Reset */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+  background-color: #eeeaec;
+}
+
+/* Variables */
+
+:root {
+
+    --primary-color: #FF1493;
+
+    --secondary-color: #FFC0CB;
+
+    --text-color: #333;
+
+    --white: #fff;
+
+    --header-height: 120px;
+    
+}
+
+
+
+/* Header Styles */
+
+.header {
+
+  width: 100%;
+
+  background: var(--white);
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.header-top {
+  
+
+  height: 60px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 0 20px;
+
+}
+
+
+
+.header-logo img,
+
+.header-brand img {
+
+  height: 110px;
+
+}
+
+
+
+.header-icons {
+
+  display: flex;
+
+  gap: 20px;
+
+}
+
+
+
+.header-icons .icon {
+
+  text-decoration: none;
+
+  color: var(--text-color);
+
+  font-size: 14px;
+
+}
+
+
+
+
+
+.header-nav {
+
+    height: 60px;
+
+    background: var(--white);
+
+    border-top: 1px solid #eee;
+
+}
+/* Video */
+.video-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    
+    height: 70vh; /* Altura de toda la pantalla */
+    position: relative;
+    height: 120vh;
+  }
+
+
+/* Navigation */
+
+.nav-list {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    list-style: none;
+
+    height: 100%;
+
+    gap: 30px;
+
+}
+
+
+
+.nav-list li a {
+
+    text-decoration: none;
+
+    color: var(--text-color);
+
+    font-weight: 500;
+
+    font-size: 14px;
+
+    transition: color 0.3s;
+
+}
+
+
+
+.nav-list li a:hover {
+
+    color: var(--primary-color);
+
+}
+
+.container {
+    display: flex;
+}
+
+.card {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card img {
+    object-fit: cover;
+    filter: blur(1);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.card:hover {
+    flex: 10;
+    transition: 0.5s;
+}
+
+.card:hover img {
+    filter: none;
+    transition: 0.5s;
+}
+
+
+.pricing-section {
+    padding: 2rem;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.pricing-card .price {
+    font-size: 1.8rem;
+    color: #71003e;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.pricing-card ul li {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.pricing-card .pricing-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color:#71003e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.pricing-card .pricing-button:hover {
+    background-color:#71003e;
+}
+
+
+/*card flip */
+
+h3 {
+    color: whitesmoke;
+}
+ 
+.card-container {
+    position: relative;
+    margin-top: 250px;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    align-self: center;
+  }
+  
+  .card {
+    margin: 20px 40px 40px 20px;
+    width: 1000px;
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    transition: 0.5s;
+  }
+  
+  .card .front {
+    border: solid 10px  #eeeaec;
+    position: absolute;
+    top: 0;
+    
+    width: 102%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  }
+  
+  .card:hover .front {
+    transform: rotateY(-180deg);
+  }
+  
+  .card .back {
+    border: solid 10px rgb(239, 204, 226);
+    width: 100%;
+    height: 100%;
+    background: #1d1d1d;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    transition: 0.5s;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000,
+      5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  
+  
+  }
+  
+  .card:hover .back {
+    transform: rotateY(0deg);
+  }
+  
+  .card .back .details {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .card .back .details .caption {
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+
+  
+  .card .back .details .caption,
+  h2,
+  span {
+    color:whitesmoke;
+    
+  }
+  
+  .social-icon {
+    padding: 10px;
+  }
+  
+  .social-icon a {
+    display: inline-block;
+    width: 36px;
+    background: #333;
+    text-align: center;
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 50%;
+    transition: 0.5s;
+  }
+  
+  .social-icon a .fab {
+    line-height: 36px;
+  }
+  
+  .social-icon a:hover {
+    background: #71003e;
+  }
+  
+  .social-icon a:hover i {
+    transition: 0.5s;
+    color: #333;
+  }
+  
+  .card img {
+    height:100%;
+    width:100%;
+    
+  }
+
+
+  .contenedor {
+    margin-top: -200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 30px 50px;
+}
+
+.contenedor .cartas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    max-width: 100%;
+    height: 300px;
+    background: white;
+    border-radius: 20px;
+    transition: 0.5s;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.contenedor .cartas:hover {
+    height: 400px;
+}
+
+.contenedor .cartas .caja-img {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #000000;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.contenedor .cartas:hover .caja-img {
+    top: -100px;
+    scale: 0.75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.contenedor .cartas .caja-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor .cartas .contenido {
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    height: 35px;
+    padding: 0 30px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.contenedor .cartas:hover .contenido {
+    top: 130px;
+    height: 250px;
+}
+
+.contenedor .cartas .contenido h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.contenedor .cartas .contenido p {
+    color: #333;
+}
+
+.contenedor .cartas .contenido a {
+    position: relative;
+    top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    background: var(--clr);
+    color: white;
+    font-weight: 500;
+}
+
+.contenedor .cartas .contenido a:hover {
+    opacity: 0.8;
+    background-color: #000000;
+    color: #71003e;
+}
+
+@media (max-width: 480px) {
+    .contenedor .cartas {
+        width: 230px;
+        border-radius: 15px;
+    }
+
+    .contenedor .cartas .caja-img {
+        width: 185px;
+        border-radius: 10px;
+    }
+
+    .contenedor .cartas .contenido p {
+        font-size: 0.8rem;
+    }
+
+    .contenedor .cartas .contenido a {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Estilos de la sección de contacto */
+#contacto-aromas {
+    background: linear-gradient(to bottom, #ffffff, #f3f3f3);
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  #contacto-aromas h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  #contacto-aromas p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilos del formulario */
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .aromas-form-grupo {
+    margin-bottom: 20px;
+  }
+  
+  .aromas-form-grupo label {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .aromas-form-grupo input,
+  .aromas-form-grupo textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .aromas-form-grupo input:focus,
+  .aromas-form-grupo textarea:focus {
+    outline: none;
+    border-color: #888;
+  }
+  
+  /* Botón de envío */
+  button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+
+  h2 {
+    color: #000000;
+  }
+
+  /*flex responsive*/
+  
+  /* Estilos generales para el contenedor y los elementos */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas filas cuando sea necesario */
+    justify-content: space-between; /* Espacio entre los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px;
+}
+
+.item {
+    background-color: #333;
+    color: white;
+    width: 30%; /* En pantallas grandes, cada elemento ocupa el 30% */
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    .item {
+        width: 45%; /* En pantallas medianas, cada elemento ocupa el 45% */
+    }
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .container {
+        justify-content: center; /* Centra los elementos en pantallas pequeñas */
+    }
+    .item {
+        width: 80%; /* En pantallas pequeñas, cada elemento ocupa el 80% */
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles pequeños) */
+@media (max-width: 480px) {
+    .container {
+        justify-content: center; /* Centra los elementos */
+    }
+    .item {
+        width: 100%; /* En pantallas muy pequeñas, los elementos ocupan el 100% */
+    }
+}
+  
